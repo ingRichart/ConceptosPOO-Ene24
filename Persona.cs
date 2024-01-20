@@ -7,6 +7,20 @@ namespace ConceptosPOO
 {
     public class Persona
     {
+        /// <summary>
+        /// Constructor de la clase
+        /// </summary>
+        public Persona()
+        {
+            Console.WriteLine($"--------------------------------");
+            Console.WriteLine($"Esto es el constructor de persona");
+            Console.WriteLine($"--------------------------------");
+
+            Telefonos = new List<string>();
+            // FechaDeNacimiento = new DateTime();
+            // Nombre = "Escribe el nombre del objeto";
+        }
+
         //PROPIEDADES
         /// <summary>
         /// Esto es el nombre
@@ -42,6 +56,8 @@ namespace ConceptosPOO
             pasos++;
             Console.WriteLine($"Valor de pasos en la funcion Caminar {pasos}");
         }
+
+        public List<string> Telefonos { get; set; }
 
     }
 }
