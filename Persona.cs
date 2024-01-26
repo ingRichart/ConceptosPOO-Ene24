@@ -12,15 +12,20 @@ namespace ConceptosPOO
         /// </summary>
         public Persona()
         {
-            Console.WriteLine($"--------------------------------");
-            Console.WriteLine($"Esto es el constructor de persona");
-            Console.WriteLine($"--------------------------------");
-
             Telefonos = new List<string>();
-            // FechaDeNacimiento = new DateTime();
-            // Nombre = "Escribe el nombre del objeto";
         }
 
+        public Persona(string name) : this()
+        {
+            Nombre = name;
+        }
+
+        public Persona(int paramEdad) : this()
+        {
+            Edad = paramEdad; 
+        }
+
+        public int Edad { get; set; }
         //PROPIEDADES
         /// <summary>
         /// Esto es el nombre
@@ -57,6 +62,9 @@ namespace ConceptosPOO
             Console.WriteLine($"Valor de pasos en la funcion Caminar {pasos}");
         }
 
+        /// <summary>
+        /// Números telefónicos.
+        /// </summary>
         public List<string> Telefonos { get; set; }
 
     }
